@@ -1,0 +1,1795 @@
+/*---------------Formatação Geral do Site---------------*/
+
+* {
+    font-family: 'Open Sans', serif;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+*:focus {
+    outline: 0;
+}
+
+body {
+    background-color: #2C3139;
+    overflow: hidden;
+}
+
+html,
+body,
+#wrapper,
+#map-canvas {
+    height: 100%;
+}
+
+#processCanvas {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+body,
+#nomelog,
+#sair,
+#falha,
+#msgLogin {
+    font-family: 'Open Sans', serif;
+}
+
+textarea {
+    resize: none;
+}
+
+#wrapper {
+    position: relative;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+/*---------------Barra de Título---------------*/
+
+#header {
+    position: absolute;
+    background-color: rgba(74, 160, 217, 0.5);
+    width: 100%;
+    height: 60px;
+    z-index: 97;
+}
+
+#logoImg {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 230px;
+}
+
+#botaoLogin {
+    height: 25px;
+    position: absolute;
+    z-index: 99;
+    top: 16px;
+    right: 30px;
+    cursor: pointer;
+    filter: invert(0.8);
+    -o-filter: invert(0.8);
+    -ms-filter: invert(0.8);
+    -moz-filter: invert(0.8);
+    -webkit-filter: invert(0.8);
+}
+
+#sair {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    height: 20px;
+    width: 35px;
+    border: none;
+    background-color: transparent;
+    font-size: 13px;
+    color: #fff;
+    top: 20px;
+    right: 70px;
+    z-index: 99;
+}
+
+#falha {
+    position: absolute;
+    top: 19px;
+    right: 113px;
+    height: 30px;
+    color: #5F2121;
+    font-size: 14px;
+}
+
+#msgLoginDiv {
+    position: absolute;
+    right: 55px;
+    top: 20px;
+    z-index: 98;
+}
+
+#msgLogin {
+    display: none;
+    font-size: 13px;
+    color: #222;
+}
+
+
+/*---------------Menu de Login/Cadastro---------------*/
+
+#signin {
+    display: none;
+    position: absolute;
+    font-size: 25px;
+    background-color: transparent;
+    width: 270px;
+    height: 110px;
+    color: #FFF;
+    border: none;
+    z-index: 99;
+    top: 60px;
+    right: 0px;
+}
+
+#form {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+#userName,
+#senha,
+#confirmaSenha,
+#nome,
+#email,
+#cpf {
+    color: #fff;
+    font-weight: 300;
+    font-family: 'Open Sans', serif;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    text-align: right;
+    position: absolute;
+    width: 255px;
+    height: 0px;
+    font-size: 16px;
+    right: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-right: 15px;
+    padding-left: 30px;
+}
+
+#userName,
+#nome {
+    top: 5px;
+}
+
+#senha,
+#email {
+    top: 45px;
+}
+
+#confirmaSenha,
+#cpf {
+    top: 85px;
+}
+
+#nome,
+#email,
+#cpf {
+    height: 35px;
+    display: none;
+}
+
+#prox,
+#voltar {
+    filter: invert(1);
+    -o-filter: invert(1);
+    -ms-filter: invert(1);
+    -moz-filter: invert(1);
+    -webkit-filter: invert(1);
+    display: none;
+    position: absolute;
+    top: 130px;
+    height: 15px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+#prox {
+    right: 30px;
+}
+
+#voltar {
+    left: 15px;
+}
+
+#novoUser {
+    font-family: 'Open Sans', serif;
+    display: none;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    text-transform: lowercase;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+#enviaCadastro {
+    display: none;
+    font-family: 'Open Sans', serif;
+    color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 85px;
+    right: 15px;
+    width: 70px;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    border: none;
+    height: 19px;
+    border-radius: 7px;
+    text-align: right;
+    padding-right: 15px;
+    padding-top: 1px;
+    font-size: 11px;
+}
+
+
+/*---------------Menu de Usuário---------------*/
+
+#nomelog {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#nomelog span {
+    font-weight: 400;
+}
+
+#menuUser {
+    position: absolute;
+    z-index: 99;
+    display: none;
+    width: 270px;
+    height: 100px;
+    background-color: transparent;
+    top: 60px;
+    right: 0px;
+}
+
+.btnResource {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0px;
+    opacity: 0;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: auto;
+}
+
+.btnImg {
+    width: 15%;
+}
+
+#novoUserDiv {
+    position: absolute;
+    top: 85px;
+    left: 15px;
+}
+
+#msgCadastroDiv {
+    position: absolute;
+    right: 55px;
+    top: 20px;
+    z-index: 98;
+}
+
+#msgCadastro {
+    display: none;
+    font-family: 'Open Sans', serif;
+    font-size: 13px;
+    color: #222;
+}
+
+#userNameValido,
+#userNameInvalido,
+#nomeValido,
+#nomeInvalido {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    width: 7px;
+}
+
+#senhaValido,
+#senhaInvalido,
+#emailValido,
+#emailInvalido {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 15px;
+    width: 7px;
+}
+
+#confirmaSenhaValido,
+#confirmaSenhaInvalido,
+#cpfValido,
+#cpfInvalido {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 15px;
+    width: 7px;
+}
+
+#erro {
+    position: absolute;
+    bottom: 7px;
+    left: 35px;
+    font-family: 'Open Sans', serif;
+    color: #C23236;
+    font-weight: 800;
+    font-size: 10px;
+}
+
+#minhasMemorias {
+    opacity: 0.75;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    width: 32px;
+    cursor: pointer;
+}
+
+#MemMsg {
+    display: none;
+    font-family: 'Open Sans', serif;
+    font-size: 11px;
+    color: #bbb;
+    font-weight: 100;
+}
+
+#MemMsgDiv {
+    position: absolute;
+    right: 65px;
+    top: 57px;
+    z-index: 98;
+}
+
+#memorias {
+    display: none;
+    position: absolute;
+    top: 95px;
+    right: 15px;
+    width: 0px;
+    height: 0px;
+    background-color: rgba(255, 255, 255, 0.04);
+    border-radius: 15px;
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 7px;
+}
+
+#memoriasDiv {
+    background-color: transparent;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.memoriaUser {
+    font-family: 'Open Sans', serif;
+    color: white;
+    font-weight: 100;
+    font-size: 13px;
+    opacity: 0.5;
+    cursor: pointer;
+    max-height: 20px;
+    max-width: 135px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: right;
+    margin-right: 4px;
+}
+
+.memoriaUserAno {
+    font-family: 'Open Sans', serif;
+    color: white;
+    font-weight: 100;
+    font-size: 13px;
+    opacity: 0.5;
+    cursor: pointer;
+    float: right;
+    margin-right: 8px;
+}
+
+.memoriaUserVaz {
+    font-family: 'Open Sans', serif;
+    color: white;
+    font-weight: 100;
+    font-size: 13px;
+    position: absolute;
+    right: 15px;
+    top: 9px;
+    opacity: 0.8;
+}
+
+.memoriaUserDiv {
+    display: none;
+    margin-top: 8px;
+    margin-right: 10px;
+    float: right;
+}
+
+.memvazio {
+    display: none;
+}
+
+.estadoMem {
+    cursor: pointer;
+    width: 15px;
+    float: right;
+    margin-right: 7px;
+    margin-top: 2px;
+}
+
+.excluir {
+    cursor: pointer;
+    width: 12px;
+    margin-right: 3px;
+    opacity: 0.3;
+    float: right;
+    margin-top: 1px;
+}
+
+.DelMemDiv {
+    width: 255px;
+    height: 0px;
+}
+
+.DelMemMsg {
+    display: none;
+    font-family: 'Open Sans', serif;
+    color: #ddd;
+    font-size: 12px;
+    text-align: right;
+    width: 220px;
+    float: right;
+    margin-top: 5px;
+}
+
+.delSim {
+    display: none;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 50px;
+    height: 20px;
+    font-weight: 500;
+    font-size: 12px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    float: right;
+    margin-right: 5px;
+    margin-top: 8px;
+}
+
+.delNao {
+    display: none;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 50px;
+    height: 20px;
+    font-weight: 500;
+    font-size: 12px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    float: right;
+    margin-top: 8px;
+}
+
+
+/*---------------Inserção de Memoria---------------*/
+
+#novaMsg {
+    display: none;
+    font-family: 'Open Sans', serif;
+    font-size: 11px;
+    color: #bbb;
+    font-weight: 100;
+    width: 75px;
+}
+
+#novaMsgDiv {
+    position: absolute;
+    right: 55px;
+    bottom: 21px;
+    z-index: 98;
+}
+
+#adicionarMem {
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    top: 3px;
+    left: 3px;
+    opacity: 0.7;
+    cursor: pointer;
+    z-index: 99;
+}
+
+#addImg {
+    position: absolute;
+    width: 50px;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#novaMemoria {
+    display: none;
+    font-size: 25px;
+    background-color: transparent;
+    width: 55px;
+    height: 55px;
+    color: #FFF;
+    border-radius: 50%;
+    border-width: 0px;
+    border-style: solid;
+    position: absolute;
+    z-index: 99;
+    bottom: 40px;
+    right: 30px;
+    cursor: pointer;
+}
+
+#adicionarRemov {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    width: 15px;
+    top: 10px;
+    left: 325px;
+    z-index: 99;
+}
+
+#divFormMem {
+    display: none;
+    width: 350px;
+    height: 350px;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+#formMemoria {
+    width: 100%;
+    height: 100%;
+}
+
+#imgCam,
+#imgAudio,
+#imgTexto,
+#imgVideo {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 75px;
+    opacity: 0.6;
+    filter: invert(1);
+    -o-filter: invert(1);
+    -ms-filter: invert(1);
+    -moz-filter: invert(1);
+    -webkit-filter: invert(1);
+}
+
+#imgTexto {
+    z-index: 99;
+    cursor: pointer;
+}
+
+#imgCamDiv,
+#imgVideoDiv,
+#imgAudioDiv,
+#imgTextoDiv {
+    position: absolute;
+    top: 137.5px;
+    left: 205px;
+    width: 75px;
+    height: 75px;
+}
+
+#inputNomeMemoria,
+#inputAno,
+#inputEndereco,
+#inputNumero {
+    display: none;
+    border-radius: 10px;
+    position: absolute;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 12px;
+}
+
+#inputDescricao {
+    display: none;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 12px;
+    height: 110px;
+    width: 230px;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    text-align: justify;
+    padding-right: 10px;
+}
+
+#inputEndereco {
+    top: 157.5px;
+    left: 30px;
+    width: 290px;
+    height: 35px;
+    padding: 10px;
+}
+
+#inputNumero {
+    top: 157.5px;
+    right: 30px;
+    width: 57px;
+    height: 35px;
+    padding: 5px;
+}
+
+#inputNomeMemoria {
+    height: 35px;
+    top: 90px;
+    left: 50px;
+    width: 185px;
+    padding: 10px;
+}
+
+#inputAno {
+    height: 35px;
+    top: 90px;
+    right: 50px;
+    width: 61px;
+    padding: 10px;
+}
+
+#descricao {
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    left: 50px;
+    bottom: 90px;
+    height: 130px;
+    width: 250px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#texto {
+    height: 120px;
+    width: 250px;
+    position: absolute;
+    top: 125px;
+    left: 50px;
+    border-radius: 13px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#inputTexto {
+    font-size: 13px;
+    position: absolute;
+    border: none;
+    color: #fff;
+    left: 13px;
+    top: 7px;
+    height: 105px;
+    width: 230px;
+    background-color: transparent;
+    padding-right: 5px;
+}
+
+#buscarendereco {
+    display: none;
+    position: absolute;
+    top: 285px;
+    right: 170px;
+    height: 16px;
+    opacity: 0.5;
+    cursor: pointer;
+    filter: invert(1);
+    -o-filter: invert(1);
+    -ms-filter: invert(1);
+    -moz-filter: invert(1);
+    -webkit-filter: invert(1);
+}
+
+#proxmem,
+#antmem {
+    filter: invert(1);
+    -o-filter: invert(1);
+    -ms-filter: invert(1);
+    -moz-filter: invert(1);
+    -webkit-filter: invert(1);
+    display: none;
+    position: absolute;
+    top: 285px;
+    height: 16px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#proxmem {
+    right: 115px;
+}
+
+#antmem {
+    left: 170px;
+}
+
+#mensagemEnvia {
+    display: none;
+    font-family: 'Open Sans', serif;
+    color: #dedede;
+    position: absolute;
+    top: 95px;
+    text-align: center;
+    width: 298px;
+    background: transparent;
+    left: 25px;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+#concluir {
+    display: none;
+    position: absolute;
+    top: 285px;
+    right: 115px;
+    height: 16px;
+    opacity: 0.7;
+    cursor: pointer;
+    filter: invert(1);
+    -o-filter: invert(1);
+    -ms-filter: invert(1);
+    -moz-filter: invert(1);
+    -webkit-filter: invert(1);
+}
+
+#sim,
+#nao {
+    display: none;
+    position: absolute;
+    top: 235px;
+    width: 79px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#sim {
+    left: 94px;
+}
+
+#nao {
+    right: 94px;
+}
+
+#fim {
+    display: none;
+    position: absolute;
+    top: 85px;
+    left: -18px;
+    height: 23px;
+    width: 33px;
+    cursor: pointer;
+    color: white;
+    font-size: 13px;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    border-radius: 6px;
+    padding-top: 2px;
+}
+
+#dropImagem,
+#dropAudio,
+#dropVideo {
+    display: none;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    border-radius: 50%;
+    z-index: 90;
+}
+
+#enviaMem,
+#ajustaMem {
+    display: none;
+    position: absolute;
+    top: 232px;
+    height: 28px;
+    width: 90px;
+    cursor: pointer;
+    z-index: 999;
+    font-size: 11px;
+    background-color: rgba(255, 255, 255, 0.15);
+    text-align: center;
+    padding-top: 6px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+#enviaMem {
+    right: 82px;
+}
+
+#ajustaMem {
+    left: 82px;
+}
+
+#enviaImagem,
+#enviaVideo,
+#enviaAudio,
+#enviaTexto {
+    display: none;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    z-index: 99;
+    position: absolute;
+    bottom: 81px;
+    right: 147px;
+    font-size: 11px;
+}
+
+#enviaTexto {
+    bottom: 38px;
+}
+
+#imgCamSmall,
+#imgVideoSmall,
+#imgAudioSmall,
+#imgTextoSmall {
+    position: absolute;
+    top: 0px;
+    width: 35px;
+    opacity: 0.3;
+    filter: invert(1);
+    -o-filter: invert(1);
+    -ms-filter: invert(1);
+    -moz-filter: invert(1);
+    -webkit-filter: invert(1);
+    cursor: pointer;
+    z-index: 99;
+}
+
+#imgCamSmallLoad,
+#imgVideoSmallLoad,
+#imgAudioSmallLoad,
+#imgTextoSmallLoad {
+    position: absolute;
+    bottom: 0px;
+    width: 35px;
+    height: 0%;
+    background-size: 35px 35px;
+    background-position: center bottom;
+}
+
+#imgCamSmall,
+#imgCamSmallLoad {
+    left: 0px;
+}
+
+#imgVideoSmall,
+#imgVideoSmallLoad {
+    left: 45px;
+}
+
+#imgAudioSmall,
+#imgAudioSmallLoad {
+    right: 45px;
+}
+
+#imgTextoSmall,
+#imgTextoSmallLoad {
+    right: 0px;
+}
+
+#imgCamSmallLoad {
+    background-image: url(../images/fotoB.png);
+}
+
+#imgVideoSmallLoad {
+    background-image: url(../images/videoB.png);
+}
+
+#imgAudioSmallLoad {
+    background-image: url(../images/audioB.png);
+}
+
+#imgTextoSmallLoad {
+    background-image: url(../images/textoB.png);
+}
+
+#menuTipo {
+    display: none;
+    position: absolute;
+    height: 35px;
+    width: 170px;
+    left: 90px;
+    top: 75px;
+    z-index: 999;
+}
+
+#pontoBranco {
+    display: none;
+    position: absolute;
+    top: 114px;
+    left: 106.5px;
+    width: 3px;
+}
+
+#texto,
+#endereco,
+#numero,
+#rua,
+#bairro,
+#cidade,
+#estado,
+#latitude,
+#longitude,
+#login {
+    display: none;
+}
+
+
+/*---------------Visualização de Memoria---------------*/
+
+#fechaMemoria {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    top: -11px;
+    right: 143px;
+    width: 25px;
+}
+
+#tituloMemoria {
+    display: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    max-width: 200px;
+    opacity: 0;
+}
+
+#descricaoMemoria {
+    display: none;
+    color: white;
+    font-size: 11px;
+    font-weight: 200;
+    width: 240px;
+    word-wrap: break-word;
+    opacity: 0;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    max-height: 150px;
+    overflow: hidden;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+#coordenadalatMemoria {
+    display: none;
+    color: white;
+    font-size: 10px;
+    font-weight: 200;
+    opacity: 0;
+}
+
+#coordenadalngMemoria {
+    display: none;
+    color: white;
+    font-size: 10px;
+    font-weight: 200;
+    opacity: 0;
+}
+
+#criadorMemoria {
+    display: none;
+    color: white;
+    font-size: 10px;
+    font-weight: 200;
+    opacity: 0;
+    margin-top: 15px
+}
+
+.imagemResource {
+    display: none;
+    width: 280px;
+    height: 180px;
+    position: absolute;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.audioResource {
+    display: none;
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.videoResource {
+    display: none;
+    width: 280px;
+    height: 180px;
+    position: absolute;
+    border-radius: 20px;
+    background-color: black;
+}
+
+#videoFile {
+    border-radius: 20px;
+    width: 280px;
+    height: 180px;
+    cursor: pointer;
+}
+
+.textResource {
+    display: table;
+    table-layout: fixed;
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 25px;
+    word-wrap: break-word;
+    padding: 15px;
+    opacity: 0;
+}
+
+#textMem {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    font-style: italic;
+}
+
+.visualizaImg {
+    cursor: pointer;
+    position: absolute;
+    top: 196px;
+    left: -65px;
+    width: 35px;
+    display: none;
+}
+
+.visualizaVideo {
+    cursor: pointer;
+    position: absolute;
+    top: 270px;
+    left: -30px;
+    width: 35px;
+    display: none;
+}
+
+.visualizaAudio {
+    cursor: pointer;
+    position: absolute;
+    top: 329px;
+    left: 30px;
+    width: 35px;
+    display: none;
+}
+
+.visualizaTexto {
+    cursor: pointer;
+    position: absolute;
+    top: 363px;
+    left: 106px;
+    width: 35px;
+    display: none;
+}
+
+#conteudoMemoria {
+    display: none;
+    font-size: 25px;
+    background-color: transparent;
+    width: 0px;
+    height: 0px;
+    color: #FFF;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 99;
+}
+
+#conteudoDescricao {
+    width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    background-color: rgba(24, 37, 47, 0.8);
+    display: none;
+    z-index: 999;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#fecharDescricao {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 15px;
+    cursor: pointer;
+}
+
+#moveDescricao {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background-image: url(../images/move.png);
+    background-size: contain;
+}
+
+#conteudoResource {
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-radius: 50%;
+    background-color: rgba(119, 119, 119, 0.3);
+    display: none;
+}
+
+
+/*---------------Elementos do Mapa---------------*/
+
+#formBusca {
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    z-index: 99;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+}
+
+#buscaEndereco {
+    display: none;
+    color: #fff;
+    background: transparent;
+    font-size: 12px;
+    position: absolute;
+    top: 2px;
+    left: 20px;
+    border: none;
+    width: 300px;
+    height: 34px;
+}
+
+#botaoBusca {
+    display: none;
+    filter: invert(1);
+    -o-filter: invert(1);
+    -ms-filter: invert(1);
+    -moz-filter: invert(1);
+    -webkit-filter: invert(1);
+    position: absolute;
+    right: 10px;
+    top: 9px;
+    width: 21px;
+}
+
+#atvbusca {
+    filter: invert(1);
+    -o-filter: invert(1);
+    -ms-filter: invert(1);
+    -moz-filter: invert(1);
+    -webkit-filter: invert(1);
+    position: absolute;
+    right: 10px;
+    top: 9px;
+    width: 21px;
+    cursor: pointer;
+}
+
+#cancelabusca {
+    display: none;
+    position: absolute;
+    right: 16px;
+    top: 13px;
+    cursor: pointer;
+    width: 15px;
+}
+
+#bloqueio {
+    display: none;
+}
+
+#zoomMais {
+    position: absolute;
+    z-index: 99;
+    width: 25px;
+    left: 30px;
+    bottom: 75px;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+#zoomMenos {
+    position: absolute;
+    z-index: 99;
+    width: 25px;
+    left: 30px;
+    bottom: 40px;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+#menuOpen {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    opacity: 0.3;
+    width: 35px;
+    top: 20px;
+}
+
+
+/*---------------Outras Formatações---------------*/
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    font-family: 'Open Sans', serif;
+    color: #bababa;
+    font-weight: 300;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    font-family: 'Open Sans', serif;
+    color: #bababa;
+    opacity: 1;
+    font-weight: 300;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    font-family: 'Open Sans', serif;
+    color: #bababa;
+    opacity: 1;
+    font-weight: 300;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    font-family: 'Open Sans', serif;
+    color: #bababa;
+    font-weight: 300;
+}
+
+#inputNomeMemoria::-webkit-input-placeholder,
+#inputAno::-webkit-input-placeholder,
+#inputDescricao::-webkit-input-placeholder {
+    /* WebKit browsers */
+    font-family: 'Open Sans', serif;
+    color: #bababa;
+    font-weight: 300;
+}
+
+#buscaEndereco::-webkit-input-placeholder {
+    /* WebKit browsers */
+    font-family: 'Open Sans', serif;
+    color: #bababa;
+    font-weight: 300;
+}
+
+#fileInput01,
+#fileInput02,
+#fileInput03 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 75px;
+    height: 75px;
+}
+
+#btnFileImage,
+#btnFileVideo,
+#btnFileAudio {
+    cursor: pointer;
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: 137.5px;
+    left: 137.5px;
+}
+
+#formImagem,
+#formVideo,
+#formAudio {
+    display: none;
+}
+
+#imagemName,
+#videoName,
+#audioName {
+    position: absolute;
+    bottom: 120px;
+    font-size: 10px;
+    text-align: center;
+    width: 190px;
+    left: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#submitImagem,
+#submitVideo,
+#submitAudio {
+    position: absolute;
+    display: none;
+    bottom: 81px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    width: 95px;
+    height: 25px;
+    border-radius: 6px;
+    left: 127.5px;
+    cursor: pointer;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 4px;
+}
+
+#okTexto {
+    display: none;
+    position: absolute;
+    bottom: -30px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #FFF;
+    width: 42px;
+    height: 21px;
+    border-radius: 7px;
+    left: 105px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 13px;
+    padding-top: 1px;
+}
+
+#mensagemEnvia spam {
+    font-weight: 600;
+}
+
+#audioPlay,
+#audioPause {
+    width: 20px;
+    position: absolute;
+    bottom: 30px;
+    left: 80px;
+    cursor: pointer;
+}
+
+#audioPlay {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    margin-right: 10px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#charLeft {
+    display: none;
+    font-family: 'Open Sans', serif;
+    position: absolute;
+    font-size: 11px;
+    bottom: 5px;
+    right: 20px;
+    color: #BBB;
+}
+
+#charLeftDesc {
+    display: none;
+    font-family: 'Open Sans', serif;
+    position: absolute;
+    font-size: 11px;
+    bottom: 5px;
+    right: 20px;
+    color: #BBB;
+}
+
+#cordImg {
+    display: none;
+    height: 25px;
+    float: left;
+    margin-right: 15px;
+    opacity: 0;
+}
+
+#userImg {
+    display: none;
+    height: 25px;
+    float: left;
+    margin-right: 10px;
+    opacity: 0;
+}
+
+#coordenadas {
+    float: left;
+    margin-right: 20px;
+}
+
+#visuAudio {
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    display: none;
+}
+
+#fr01,
+#fr01d,
+#fr02,
+#fr02d,
+#fr03,
+#fr03d,
+#fr04,
+#fr04d,
+#fr05,
+#fr05d,
+#fr06,
+#fr06d,
+#fr07,
+#fr07d,
+#fr08,
+#fr08d,
+#fr09,
+#fr09d,
+#fr10,
+#fr10d,
+#fr11,
+#fr11d,
+#fr12,
+#fr12d,
+#fr13,
+#fr13d,
+#fr14,
+#fr14d,
+#fr15,
+#fr15d,
+#fr16,
+#fr16d,
+#fr17,
+#fr17d,
+#fr18,
+#fr18d,
+#fr19,
+#fr19d,
+#fr20,
+#fr20d {
+    position: absolute;
+    width: 2px;
+    height: 1px;
+    background-color: white;
+}
+
+#fr01,
+#fr02,
+#fr03,
+#fr04,
+#fr05,
+#fr06,
+#fr07,
+#fr08,
+#fr09,
+#fr10,
+#fr11,
+#fr12,
+#fr13,
+#fr14,
+#fr15,
+#fr16,
+#fr17,
+#fr18,
+#fr19,
+#fr20 {
+    bottom: 50px;
+}
+
+#fr01d,
+#fr02d,
+#fr03d,
+#fr04d,
+#fr05d,
+#fr06d,
+#fr07d,
+#fr08d,
+#fr09d,
+#fr10d,
+#fr11d,
+#fr12d,
+#fr13d,
+#fr14d,
+#fr15d,
+#fr16d,
+#fr17d,
+#fr18d,
+#fr19d,
+#fr20d {
+    top: 70px;
+}
+
+#fr01,
+#fr01d {
+    left: 30px;
+}
+
+#fr02,
+#fr02d {
+    left: 36px;
+}
+
+#fr03,
+#fr03d {
+    left: 42px;
+}
+
+#fr04,
+#fr04d {
+    left: 48px;
+}
+
+#fr05,
+#fr05d {
+    left: 54px;
+}
+
+#fr06,
+#fr06d {
+    left: 60px;
+}
+
+#fr07,
+#fr07d {
+    left: 66px;
+}
+
+#fr08,
+#fr08d {
+    left: 72px;
+}
+
+#fr09,
+#fr09d {
+    left: 78px;
+}
+
+#fr10,
+#fr10d {
+    left: 84px;
+}
+
+#fr11,
+#fr11d {
+    left: 90px;
+}
+
+#fr12,
+#fr12d {
+    left: 96px;
+}
+
+#fr13,
+#fr13d {
+    left: 102px;
+}
+
+#fr14,
+#fr14d {
+    left: 108px;
+}
+
+#fr15,
+#fr15d {
+    left: 114px;
+}
+
+#fr16,
+#fr16d {
+    left: 120px;
+}
+
+#fr17,
+#fr17d {
+    left: 126px;
+}
+
+#fr18,
+#fr18d {
+    left: 132px;
+}
+
+#fr19,
+#fr19d {
+    left: 138px;
+}
+
+#fr20,
+#fr20d {
+    left: 144px;
+}
+
+.pac-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    max-height: 63px !important;
+    border: none;
+    border-top: 1px solid rgba(64, 64, 64, 0.72);
+}
+
+.pac-item {
+    border: none;
+    border-bottom: 1px dashed rgba(51, 51, 51, 0.5);
+}
+
+.submit {
+    display: none;
+}
+
+#msgFinal {
+    display: none;
+    font-size: 13px;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    text-align: right;
+    width: 250px;
+}
+
+#marcadorErro {
+    display: none;
+    font-size: 13px;
+    width: 330px;
+    text-align: center;
+    position: absolute;
+    left: -110px;
+    top: -110px
+}
+
+@-webkit-keyframes transp {
+    from {background-color: rgba(255, 255, 255, 0.1);}
+    to {background-color: transparent;}
+}
+
+/* Standard syntax */
+@keyframes transp {
+    from {background-color: rgba(255, 255, 255, 0.1);}
+    to {background-color: transparent;}
+}
+
+@-webkit-keyframes color {
+    from {background-color: transparent;}
+    to {background-color: rgba(255, 255, 255, 0.1);}
+}
+
+/* Standard syntax */
+@keyframes color {
+    from {background-color: transparent;}
+    to {background-color: rgba(255, 255, 255, 0.1);}
+}
+
+#videoIntro{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%); /* IE 9 */
+    -webkit-transform: translate(-50%, -50%); /* Safari */
+    transform: translate(-50%, -50%);
+    width: 800px;
+}
+
+#videoIntroDiv {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 100%;
+    height: 100%;
+}
+
+#fechaVideo {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    background: url('../images/fechar08-01.png');
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-size: contain;
+}
