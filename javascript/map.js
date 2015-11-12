@@ -333,6 +333,7 @@ function buscaMemoria() {
                     icon: image,
                     title: obj[i][0]
                 });
+                alert(i);
                 markers.push(marker);
                 conteudoId.push(obj[i][0]);
                 r.push((Math.random() * 10) + 40);
