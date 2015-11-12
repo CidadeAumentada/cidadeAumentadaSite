@@ -698,6 +698,7 @@ function initialize() {
     autocompleteSearch = new google.maps.places.Autocomplete(document.getElementById('buscaEndereco'));
 
     google.maps.event.addListenerOnce(map, 'idle', function () {
+        alert("!!!")
         buscaMemoria();
     });
     /*completa o formulário quando um novo endereco é selecionado*/
