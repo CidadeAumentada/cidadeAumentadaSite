@@ -312,6 +312,7 @@ function moveMemoria() {
 function buscaMemoria() {
     "use strict";
     var oReq = new XMLHttpRequest(); // objeto para acesso ao webservice
+    alert("1");
     //      oReq02 = new XMLHttpRequest();
     oReq.onload = function () {
         var json = oReq.responseText, // recebe resposta do webservice
@@ -324,7 +325,10 @@ function buscaMemoria() {
                 url: "images/pontoMemoria.png",
                 anchor: new google.maps.Point(7.5, 7.5)
             };
+
+        alert("2" + obj.length);
         for (i = 0; i < obj.length; i += 1) {
+            alert("i");
             if (obj[i][3] === username || obj[i][6] === 'S') {
                 latlng = new google.maps.LatLng(obj[i][1], obj[i][2]);
                 marker = new google.maps.Marker({
@@ -333,7 +337,6 @@ function buscaMemoria() {
                     icon: image,
                     title: obj[i][0]
                 });
-                alert(i);
                 markers.push(marker);
                 conteudoId.push(obj[i][0]);
                 r.push((Math.random() * 10) + 40);
@@ -698,7 +701,6 @@ function initialize() {
     autocompleteSearch = new google.maps.places.Autocomplete(document.getElementById('buscaEndereco'));
 
     google.maps.event.addListenerOnce(map, 'idle', function () {
-        alert("!!!")
         buscaMemoria();
     });
     /*completa o formulário quando um novo endereco é selecionado*/
