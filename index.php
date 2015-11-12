@@ -20,7 +20,7 @@
         <script>try{Typekit.load({ async: true });}catch(e){}</script>
 -->
 
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
         <!--        <link rel="stylesheet" type="text/css" href="css/dropzone.css" media="all">-->
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />

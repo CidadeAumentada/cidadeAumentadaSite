@@ -3,7 +3,7 @@
     $servername = "dbmy0010.whservidor.com";       // nome do servidor
     $username = "polisedema_2";   // nome de usuário
     $password = "inovacidades2014";  // senha
-    $dbname = "u162031767_cidad";    // nome do banco de dados
+    $dbname = "polisedema_2";    // nome do banco de dados
 
     $con = new mysqli($servername, $username, $password, $dbname);           // define parametros para conceção
 
