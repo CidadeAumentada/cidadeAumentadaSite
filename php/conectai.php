@@ -1,6 +1,6 @@
 <?php
     /*informacões para concexão com o banco de dados*/
-    $servername = "localhost";       // nome do servidor
+    $servername = "dbmy0010.whservidor.com";       // nome do servidor
     $username = "u162031767_user";   // nome de usuário
     $password = "inovacidades2014";  // senha
     $dbname = "u162031767_cidad";    // nome do banco de dados
