@@ -13,7 +13,7 @@
         <script type="text/javascript" src="javascript/bibliotecas/processing.js"></script>
         <script type="text/javascript" src="javascript/bibliotecas/dancer.js"></script>
 
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCsoULdLsZ5WoTS2ABNtIdg2bkHKAe8cEc&language=pt&region=BR&libraries=places,visualization"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=&language=pt&region=BR&libraries=places,visualization"></script>
 
         <!--
         <script src="https://use.typekit.net/moz5brl.js"></script>
