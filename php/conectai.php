@@ -1,9 +1,9 @@
 <?php
     /*informacões para concexão com o banco de dados*/
-    $servername = "";       // nome do servidor
-    $username = "";   // nome de usuário
-    $password = "";  // senha
-    $dbname = "";    // nome do banco de dados
+    $servername = "dbmy0010.whservidor.com";       // nome do servidor
+    $username = "polisedema_2";   // nome de usuário
+    $password = "inovacidades2014";  // senha
+    $dbname = "polisedema_2";    // nome do banco de dados
 
     $con = new mysqli($servername, $username, $password, $dbname);           // define parametros para conceção
 
