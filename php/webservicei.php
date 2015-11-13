@@ -285,8 +285,6 @@
     } else if ($funcao == 'select_all') {
         $query = "SELECT * FROM sec_users";
 
-        echo $query;
-
         if(!$result = $con->query($query)) {
             die('There was an error running the query [' . $con->error . ']');
         }
