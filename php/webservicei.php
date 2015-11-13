@@ -289,8 +289,6 @@
             die('There was an error running the query [' . $con->error . ']');
         }
 
-        echo $result;
-
         $jsonObject = array();
         $i = 0;
         while ($row = $result->fetch_assoc()) {
